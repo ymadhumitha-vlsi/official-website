@@ -2,7 +2,7 @@
    GOOGLE FONT
 ========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap');
 
 /* ==========================================================
    RESET
@@ -24,7 +24,7 @@ body{
 
     color:#ffffff;
 
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Source Sans 3',sans-serif;
 
     line-height:1.6;
 
@@ -33,6 +33,8 @@ body{
 a{
 
     text-decoration:none;
+
+    color:inherit;
 
 }
 
@@ -45,18 +47,122 @@ img{
 }
 
 /* ==========================================================
+   MENU BAR
+========================================================== */
+
+.menu-bar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:18px 30px;
+
+    z-index:1000;
+
+    background:#000;
+
+}
+
+.menu-icon{
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+    transition:.3s;
+
+}
+
+.menu-icon:hover{
+
+    color:#2563eb;
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+.sidebar{
+
+    position:fixed;
+
+    left:-320px;
+
+    top:0;
+
+    width:320px;
+
+    height:100%;
+
+    background:#111;
+
+    padding-top:70px;
+
+    transition:.35s;
+
+    z-index:2000;
+
+    border-right:1px solid #222;
+
+}
+
+.sidebar a{
+
+    display:block;
+
+    padding:18px 35px;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:#1d4ed8;
+
+}
+
+.closebtn{
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================================
    HERO
 ========================================================== */
 
 .hero{
 
-    width:100%;
+    padding:120px 25px 90px;
 
-    background:#000;
+    text-align:center;
 
-    padding:90px 30px;
-
-    border-bottom:1px solid #1d1d1d;
+    border-bottom:1px solid #1b1b1b;
 
 }
 
@@ -66,21 +172,17 @@ img{
 
     margin:auto;
 
-    text-align:center;
-
 }
 
 .hero h1{
 
-    font-family:'Anton',sans-serif;
-
     font-size:72px;
+
+    font-weight:900;
 
     text-transform:uppercase;
 
     letter-spacing:2px;
-
-    color:#ffffff;
 
     margin-bottom:18px;
 
@@ -88,11 +190,11 @@ img{
 
 .hero p{
 
+    font-size:20px;
+
     color:#bdbdbd;
 
-    font-size:19px;
-
-    font-weight:500;
+    font-weight:600;
 
 }
 
@@ -102,7 +204,7 @@ img{
 
 .section{
 
-    width:96%;
+    width:95%;
 
     max-width:1800px;
 
@@ -112,17 +214,15 @@ img{
 
 .section h2{
 
-    font-family:'Anton',sans-serif;
+    font-size:44px;
 
-    font-size:42px;
-
-    letter-spacing:1px;
+    font-weight:700;
 
     text-align:center;
 
-    margin-bottom:45px;
+    margin-bottom:50px;
 
-    color:#ffffff;
+    text-transform:uppercase;
 
 }
 
@@ -136,7 +236,7 @@ img{
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:24px;
+    gap:25px;
 
 }
 
@@ -146,9 +246,9 @@ img{
 
 .service-card{
 
-    background:#111111;
+    background:#111;
 
-    border:1px solid #242424;
+    border:1px solid #222;
 
     border-radius:18px;
 
@@ -176,17 +276,17 @@ img{
 
     width:100%;
 
-    height:190px;
+    height:200px;
 
     object-fit:contain;
 
     object-position:center;
 
-    background:#111111;
-
     padding:15px;
 
-    transition:.4s;
+    background:#111;
+
+    transition:.35s;
 
 }
 
@@ -208,29 +308,25 @@ img{
 
 .content h3{
 
-    font-family:'Anton',sans-serif;
+    font-size:24px;
 
-    font-size:23px;
-
-    letter-spacing:.5px;
+    font-weight:700;
 
     margin-bottom:15px;
-
-    color:#ffffff;
 
 }
 
 .content p{
 
-    font-size:15px;
+    font-size:16px;
 
     color:#cfcfcf;
 
     line-height:1.7;
 
-    min-height:90px;
+    min-height:95px;
 
-    margin-bottom:22px;
+    margin-bottom:20px;
 
 }
 
@@ -244,19 +340,17 @@ img{
 
     width:100%;
 
+    padding:14px;
+
+    text-align:center;
+
     background:#2563eb;
 
     color:#ffffff;
 
-    text-align:center;
-
-    padding:14px;
+    font-weight:700;
 
     border-radius:10px;
-
-    font-size:15px;
-
-    font-weight:bold;
 
     transition:.3s;
 
@@ -278,25 +372,9 @@ img{
 
     height:1px;
 
-    background:#222222;
+    background:#222;
 
     margin:90px 0;
-
-}
-
-/* ==========================================================
-   CARD HOVER EFFECTS
-========================================================== */
-
-.service-card:hover h3{
-
-    color:#60a5fa;
-
-}
-
-.service-card:hover{
-
-    cursor:pointer;
 
 }
 
@@ -326,17 +404,33 @@ img{
 
     height:100%;
 
-    background:rgba(255,255,255,0.15);
+    background:rgba(255,255,255,.15);
 
     transform:skewX(-25deg);
 
-    transition:0.7s;
+    transition:.7s;
 
 }
 
 .btn:hover::before{
 
-    left:180%;
+    left:170%;
+
+}
+
+/* ==========================================================
+   CARD HOVER
+========================================================== */
+
+.service-card:hover h3{
+
+    color:#60a5fa;
+
+}
+
+.service-card:hover{
+
+    cursor:pointer;
 
 }
 
@@ -356,7 +450,7 @@ img{
 
         opacity:0;
 
-        transform:translateY(35px);
+        transform:translateY(40px);
 
     }
 
@@ -367,6 +461,26 @@ img{
         transform:translateY(0);
 
     }
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    width:100%;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    color:#9ca3af;
+
+    border-top:1px solid #222;
+
+    margin-top:100px;
 
 }
 
@@ -390,7 +504,7 @@ img{
 
     background:#2563eb;
 
-    border-radius:30px;
+    border-radius:20px;
 
 }
 
@@ -401,32 +515,10 @@ img{
 }
 
 /* ==========================================================
-   FOOTER
+   RESPONSIVE - TABLET
 ========================================================== */
 
-footer{
-
-    width:100%;
-
-    margin-top:100px;
-
-    padding:40px 20px;
-
-    text-align:center;
-
-    color:#9ca3af;
-
-    border-top:1px solid #222;
-
-    font-size:15px;
-
-}
-
-/* ==========================================================
-   RESPONSIVE - TABLETS
-========================================================== */
-
-@media screen and (max-width:1200px){
+@media screen and (max-width:1400px){
 
     .card-grid{
 
@@ -448,9 +540,21 @@ footer{
 
 @media screen and (max-width:768px){
 
+    .menu-bar{
+
+        padding:15px 20px;
+
+    }
+
+    .menu-icon{
+
+        font-size:30px;
+
+    }
+
     .hero{
 
-        padding:70px 20px;
+        padding:100px 20px 70px;
 
     }
 
@@ -496,23 +600,37 @@ footer{
 
     }
 
+    .sidebar{
+
+        width:260px;
+
+        left:-260px;
+
+    }
+
 }
 
 /* ==========================================================
-   LARGE DESKTOPS
+   LARGE SCREENS
 ========================================================== */
 
 @media screen and (min-width:1700px){
 
-    .card-grid{
+    .hero h1{
 
-        gap:30px;
+        font-size:82px;
 
     }
 
-    .hero h1{
+    .hero-content{
 
-        font-size:80px;
+        max-width:1700px;
+
+    }
+
+    .card-grid{
+
+        gap:30px;
 
     }
 
